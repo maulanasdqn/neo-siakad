@@ -1,3 +1,4 @@
+import { FC, PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
@@ -5,18 +6,16 @@ import "./globals.css";
 const monserat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Neo SIAKAD",
-  description: "Neo Siakad UNINUS",
+  title: "Neo Siakad",
+  description: "Neo Siakad Universitas Islam Nusantara",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: FC<Readonly<PropsWithChildren>> = ({ children }) => {
   return (
     <html lang="en">
       <body className={monserat.className}>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
