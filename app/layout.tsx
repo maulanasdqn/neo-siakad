@@ -8,6 +8,9 @@ const monserat = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Neo Siakad",
   description: "Neo Siakad Universitas Islam Nusantara",
+  icons: {
+    icon: "./favicon.svg",
+  },
 };
 
 const RootLayout: FC<Readonly<PropsWithChildren>> = ({ children }) => {
