@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { colors } from "./design-token";
 
 const config: Config = {
   content: [
@@ -6,7 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: ["class", '[data-mode="dark"]'],
-  theme: {},
+  theme: {
+    colors,
+  },
   plugins: [],
 };
 export default config;
