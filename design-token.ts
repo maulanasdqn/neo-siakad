@@ -3,7 +3,7 @@ export const colors = {
   black: "#000000",
   slate: "#E4E5E7",
   primary: {
-    default: "#009647",
+    DEFAULT: "#009647",
     50: "#edfff5",
     100: "#d6ffe9",
     200: "#afffd4",
@@ -18,7 +18,7 @@ export const colors = {
   },
 
   "primary-2": {
-    default: "#175349",
+    DEFAULT: "#175349",
     50: "#f1fcf8",
     100: "#d0f7eb",
     200: "#a2edd7",
@@ -33,7 +33,7 @@ export const colors = {
   },
 
   secondary: {
-    default: "#f8bf02",
+    DEFAULT: "#f8bf02",
     50: "#fffeea",
     100: "#fffcc5",
     200: "#fff986",
@@ -48,7 +48,7 @@ export const colors = {
   },
 
   success: {
-    default: "#53cc55",
+    DEFAULT: "#53cc55",
     50: "#f1fcf1",
     100: "#dff9df",
     200: "#c1f1c1",
@@ -63,7 +63,7 @@ export const colors = {
   },
 
   info: {
-    default: "#1b81f7",
+    DEFAULT: "#1b81f7",
     50: "#eef9ff",
     100: "#d9f0ff",
     200: "#bbe5ff",
@@ -78,7 +78,7 @@ export const colors = {
   },
 
   warning: {
-    default: "#ffb800",
+    DEFAULT: "#ffb800",
     50: "#fffeea",
     100: "#fff9c5",
     200: "#fff485",
@@ -93,7 +93,7 @@ export const colors = {
   },
 
   error: {
-    default: "#ff601c",
+    DEFAULT: "#ff601c",
     50: "#fff5ed",
     100: "#ffe8d4",
     200: "#ffcda8",
@@ -108,7 +108,7 @@ export const colors = {
   },
 
   neutral: {
-    default: "#53cc55",
+    DEFAULT: "#53cc55",
     50: "#f1fcf1",
     100: "#f1fcf1",
     200: "#dff9df",
@@ -123,7 +123,7 @@ export const colors = {
   },
 
   grey: {
-    default: "#6d6d6d",
+    DEFAULT: "#6d6d6d",
     50: "#f6f6f6",
     100: "#e7e7e7",
     200: "#d1d1d1",
