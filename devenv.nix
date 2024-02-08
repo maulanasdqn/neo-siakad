@@ -4,6 +4,7 @@
   packages = with pkgs; [
     bun
     nodejs
+
     (writeScriptBin "helpme" ''
       __usage="
       👋 Welcome to NeoSiakad development environment. 🚀
@@ -13,6 +14,7 @@
 
       NodeJS Version: v${nodejs.version}
       Bun Version: v${bun.version}
+      Typescript Version: v${typescript.version} 
 
       Command available:
         - start:            start project in production ( need to run build first  ) 🛹
@@ -70,5 +72,12 @@
     package = postgresql_15;
     initialDatabases = [{ name = "neosiakad-db"; }];
   };
+
+  services.rabbitmq = with pkgs; {
+    enable = true;
+    package = rabbitmq-server;
+  };
+
+  services.redis.enable = true;
 
 }
