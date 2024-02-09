@@ -10,7 +10,7 @@
     "studio": "drizzle-kit studio",
     "db:gen": "drizzle-kit generate:pg",
     "db:push": "drizzle-kit push:pg",
-    "db:seed": "tsx ./utils/seed.ts",
+    "db:seed": "tsx ./drizzle/seed.ts",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
