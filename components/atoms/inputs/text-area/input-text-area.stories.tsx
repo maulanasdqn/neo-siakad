@@ -5,7 +5,7 @@ import { InputTextArea } from "./index";
 const meta: Meta<typeof InputTextArea> = {
   component: InputTextArea,
   tags: ["autodocs"],
-  title: "components/atoms/inputs/text-area",
+  title: "components/atoms/Text Area",
   argTypes: {
     status: {
       options: ["default", "error", "warning", "success"],

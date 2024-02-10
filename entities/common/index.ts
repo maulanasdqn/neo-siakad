@@ -6,6 +6,7 @@ export type TVariant =
   | "secondary"
   | "success"
   | "warning"
+  | "info"
   | "error";
 
 export type TVariantType = "solid" | "outline";

@@ -13,7 +13,7 @@ export const Button: FC<TButton> = ({
 }): ReactElement => {
   const className = clsx(
     "rounded-lg text-white hover:opacity-80",
-    "disabled:cursor-not-allowed disabled:opacity-80 disabled:hover:opacity-100 disabled:bg-grey-200",
+    "disabled:cursor-not-allowed disabled:hover:opacity-80 disabled:bg-grey-200",
     {
       "border bg-transparent": variantType === "outline",
       "border-none": variantType === "solid",
@@ -24,6 +24,7 @@ export const Button: FC<TButton> = ({
       "bg-success": variant === "success" && variantType === "solid",
       "bg-error": variant === "error" && variantType === "solid",
       "bg-warning": variant === "warning" && variantType === "solid",
+      "bg-info": variant === "info" && variantType === "solid",
     },
     {
       "border-bg-primary text-primary":
@@ -36,6 +37,8 @@ export const Button: FC<TButton> = ({
         variant === "error" && variantType === "outline",
       "border-bg-warning text-warning":
         variant === "warning" && variantType === "outline",
+      "border-bg-info text-info":
+        variant === "info" && variantType === "outline",
     },
     {
       "text-sm px-2 py-1": size === "sm",
