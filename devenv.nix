@@ -3,7 +3,7 @@
 {
   packages = with pkgs; [
     bun
-    nodejs
+    nodejs_21
 
     (writeScriptBin "helpme" ''
       __usage="
@@ -12,7 +12,7 @@
 
       [Info]===============================================================>
 
-      NodeJS Version: v${nodejs.version}
+      NodeJS Version: v${nodejs_21.version}
       Bun Version: v${bun.version}
       Typescript Version: v${typescript.version} 
 
@@ -42,7 +42,7 @@
     '')
 
     (writeScriptBin "start" ''
-      bun start
+      node .next/standalone/server.js
     '')
 
     (writeScriptBin "db-generate" ''
