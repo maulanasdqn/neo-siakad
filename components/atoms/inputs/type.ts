@@ -13,6 +13,14 @@ export type TInput = Omit<
   status: Omit<TVariant, "primary" | "secondary">;
 };
 
+export type TInputCheckbox = Omit<
+  DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
+  "size" | "type"
+> & {
+  size: TSize;
+  status: Omit<TVariant, "primary" | "secondary">;
+};
+
 export type TTextArea = Omit<
   DetailedHTMLProps<
     TextareaHTMLAttributes<HTMLTextAreaElement>,
