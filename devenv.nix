@@ -59,10 +59,6 @@
 
   ];
 
-  enterShell = ''
-    helpme
-  '';
-
   languages.typescript.enable = true;
 
   dotenv.enable = true;
@@ -79,5 +75,9 @@
   };
 
   services.redis.enable = true;
+
+  enterShell = ''
+    helpme
+  '';
 
 }
