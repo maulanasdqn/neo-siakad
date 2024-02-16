@@ -26,6 +26,7 @@
         - db-gen:           generate drizzle migration
         - db-push:          push migration
         - db-seed:          seed database
+        - db-studio:        open drizzle studio
         - helpme:           show this messages
 
       Repository:
@@ -48,11 +49,11 @@
     '')
 
     (writeScriptBin "story-dev" ''
-      bun storybook:dev
+      bun story:dev
     '')
 
     (writeScriptBin "story-build" ''
-      bun storybook:build
+      bun story:build
     '')
 
     (writeScriptBin "db-generate" ''
@@ -65,6 +66,10 @@
 
     (writeScriptBin "db-seed" ''
       bun db:seed
+    '')
+
+    (writeScriptBin "db-studio" ''
+      bun db:studio
     '')
 
   ];
