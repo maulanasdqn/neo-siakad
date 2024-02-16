@@ -21,6 +21,8 @@
         - build:            build project for production
         - dev:              start development server
         - start-postgres:   start postgres-db
+        - story-dev:        start storybook in development
+        - story-build:      build storybook
         - db-gen:           generate drizzle migration
         - db-push:          push migration
         - db-seed:          seed database
@@ -45,6 +47,14 @@
       node .next/standalone/server.js
     '')
 
+    (writeScriptBin "story-dev" ''
+      bun storybook:dev
+    '')
+
+    (writeScriptBin "story-build" ''
+      bun storybook:build
+    '')
+
     (writeScriptBin "db-generate" ''
       bun db:gen
     '')
@@ -59,25 +69,15 @@
 
   ];
 
-  languages.typescript.enable = true;
-
-  dotenv.enable = true;
-
-  services.postgres = with pkgs; {
-    enable = true;
-    package = postgresql_15;
-    initialDatabases = [{ name = "neosiakad-db"; }];
-  };
-
-  services.rabbitmq = with pkgs; {
-    enable = true;
-    package = rabbitmq-server;
-  };
-
-  services.redis.enable = true;
-
   enterShell = ''
     helpme
   '';
+
+  languages = {
+    typescript.enable = true;
+    nix.enable = true;
+  };
+
+  dotenv.enable = true;
 
 }

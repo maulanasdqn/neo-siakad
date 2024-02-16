@@ -15,7 +15,7 @@
             src = pkgs.fetchurl {
               url =
                 "https://nodejs.org/dist/v21.6.1/node-v21.6.1-darwin-arm64.tar.gz";
-              sha256 = "sha256-rY2PxTMO9HeI9QnCrzmMgGC7Way+kUBw0N9oTNLY05s";
+              sha256 = "sha256-lMKAu6gJ+maGfjY+yemQIXrt+JMRZmC4x1ocT9o7rqU=";
             };
             installPhase = ''
               echo "installing nodejs"
@@ -93,6 +93,7 @@
 
         };
       };
+
       flake = { };
     };
 }
